@@ -21,6 +21,10 @@ function AuthProvider({ children }) {
     localStorage.removeItem("authToken");
   }
 
+  const getToken = () => {
+    return localStorage.getItem("authToken")
+  }
+
   const authenticateUser = () => {
     //  <==  ADD
     // Get the stored token from the localStorage
@@ -77,7 +81,7 @@ function AuthProvider({ children }) {
   */
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, isLoading, user, storeToken, authenticateUser, logOutUser }}>
+    <AuthContext.Provider value={{ isLoggedIn, isLoading, user, storeToken, authenticateUser, logOutUser, getToken }}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,9 +1,6 @@
 // src/components/AddTask.jsx
 
 import { useState } from "react";
-import axios from "axios";
-
-const API_URL = "https://project-management-api-4641927fee65.herokuapp.com";
 
 
 function AddTask({ refreshProject, projectId }) {
